@@ -247,6 +247,111 @@
     }
   </style>
 
+
+  <style>
+    .testimonial-carousel {
+      position: relative;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 56px 44px;
+    }
+
+    .testimonial-track {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .testimonial-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: translateY(18px) scale(0.98);
+      pointer-events: none;
+      transition: opacity .45s ease, transform .45s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .testimonial-slide.is-active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .testimonial-arrow {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(11, 27, 46, 0.14);
+      background: #fff;
+      color: #0B1B2E;
+      font-size: 32px;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 14px 32px rgba(11, 27, 46, 0.12);
+      transition: .2s ease;
+    }
+
+    .testimonial-arrow:hover {
+      transform: translateY(-50%) scale(1.05);
+      color: #C59B55;
+    }
+
+    .testimonial-arrow--prev { left: 0; }
+    .testimonial-arrow--next { right: 0; }
+
+    .testimonial-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .testimonial-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(11, 27, 46, 0.22);
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .testimonial-dot.is-active {
+      width: 28px;
+      background: #C59B55;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-carousel {
+        padding: 0 0 44px;
+      }
+
+      .testimonial-track {
+        min-height: 430px;
+      }
+
+      .testimonial-arrow {
+        top: auto;
+        bottom: -4px;
+        width: 38px;
+        height: 38px;
+        font-size: 28px;
+      }
+
+      .testimonial-arrow--prev { left: 18px; }
+      .testimonial-arrow--next { right: 18px; }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -359,7 +464,7 @@
       </div>
       <div class="about__grid">
         <div class="about__photo reveal">
-          <img src="/images/sobre.jpg" alt="Dr. Leandro Vladimir em atendimento no consultório em Salvador" width="600" height="900" loading="lazy" />
+          <img src="/images/sobre.jpg" data-fallbacks="/images/sobre.JPG,/images/sobre.jpeg,/images/sobre.JPEG,/images/Sobre.JPG,/images/Sobre.jpg" alt="Dr. Leandro Vladimir em atendimento no consultório em Salvador" width="600" height="900" loading="lazy" />
           <div class="about__quote">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
             <p>Formação de excelência<br/><small>Residência em Cardiologia e Hemodinâmica nos melhores centros do Brasil</small></p>
@@ -651,44 +756,58 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <strong>5.0</strong>
-          <span>40 avaliações no Google</span>
+          <span>avaliações no Google</span>
         </div>
       </div>
 
-      <div class="testimonials">
-        <article class="testimonial reveal">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Inicialmente, fomos surpreendidos pela pouca idade, mas Dr Leandro logo nos mostrou tamanha capacidade, atenção e cuidado durante a consulta. Um cardiologista excepcional e que, inclusive, disponibilizou seu telefone pessoal para eventuais dúvidas e urgências."</p>
-          <footer><strong>Juliana Oliva</strong><span>Google</span></footer>
-        </article>
-        <article class="testimonial reveal" data-delay="100">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Tive a sorte de encontrar o Dr. Leandro no pronto-socorro em um momento que tudo que eu precisava era de um médico experiente e acolhedor. Depois disso, me tornei paciente do consultório e me sinto muito segura com suas abordagens e tratamentos."</p>
-          <footer><strong>Lillian Antunes</strong><span>Google</span></footer>
-        </article>
-        <article class="testimonial reveal" data-delay="200">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Dr. Leandro é um dos cardiologistas mais atenciosos que já conheci. Está sempre atualizado com as últimas pesquisas científicas e é muito cuidadoso em responder todas as minhas perguntas durante a consulta. Certamente o melhor de Salvador."</p>
-          <footer><strong>Carlos Eduardo</strong><span>Google</span></footer>
-        </article>
-        <article class="testimonial reveal">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Vladimir é um colega de longa data que se tornou meu cardiologista principal em Salvador. Como neurologista, eu o escolhi como referência para meus pacientes. Confio a saúde dos meus pacientes a ele."</p>
-          <footer><strong>Dra. Karla Couto</strong><span>Médica Neurologista</span></footer>
-        </article>
-        <article class="testimonial reveal" data-delay="100">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Foi maravilhoso, Dr. Leandro é um médico extremamente humano, competente, dedicado e humilde. Eu o recomendei e continuo recomendando para minha família e amigos!"</p>
-          <footer><strong>Nereida Soares</strong><span>Google</span></footer>
-        </article>
-        <article class="testimonial reveal" data-delay="200">
-          <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
-          <p>"Um médico competente, bem preparado e com vasta experiência, transmitindo segurança durante todo o processo. Isso é fundamental porque dá ao paciente a segurança que ele precisa em um momento tão vulnerável. Parabéns!"</p>
-          <footer><strong>Eraldo Nascimento</strong><span>Google</span></footer>
-        </article>
+      <div class="testimonial-carousel reveal" aria-label="Depoimentos de pacientes">
+        <button class="testimonial-arrow testimonial-arrow--prev" type="button" aria-label="Depoimento anterior">‹</button>
+
+        <div class="testimonial-track">
+          <article class="testimonial testimonial-slide is-active">
+            <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <p>"Inicialmente, fomos surpreendidos pela pouca idade, mas Dr. Leandro logo nos mostrou tamanha capacidade, atenção e cuidado durante a consulta. Um cardiologista excepcional."</p>
+            <footer><strong>Juliana Oliva</strong><span>Google</span></footer>
+          </article>
+
+          <article class="testimonial testimonial-slide">
+            <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <p>"Tive a sorte de encontrar o Dr. Leandro no pronto-socorro em um momento que tudo que eu precisava era de um médico experiente e acolhedor."</p>
+            <footer><strong>Lillian Antunes</strong><span>Google</span></footer>
+          </article>
+
+          <article class="testimonial testimonial-slide">
+            <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <p>"Dr. Leandro é um dos cardiologistas mais atenciosos que já conheci. Está sempre atualizado e é muito cuidadoso em responder todas as perguntas."</p>
+            <footer><strong>Carlos Eduardo</strong><span>Google</span></footer>
+          </article>
+
+          <article class="testimonial testimonial-slide">
+            <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <p>"Foi maravilhoso. Dr. Leandro é um médico extremamente humano, competente, dedicado e humilde. Recomendo para família e amigos."</p>
+            <footer><strong>Nereida Soares</strong><span>Google</span></footer>
+          </article>
+
+          <article class="testimonial testimonial-slide">
+            <svg class="testimonial__quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+            <p>"Um médico competente, bem preparado e com vasta experiência, transmitindo segurança durante todo o processo."</p>
+            <footer><strong>Eraldo Nascimento</strong><span>Google</span></footer>
+          </article>
+        </div>
+
+        <button class="testimonial-arrow testimonial-arrow--next" type="button" aria-label="Próximo depoimento">›</button>
+
+        <div class="testimonial-dots" aria-label="Navegação dos depoimentos"></div>
+      </div>
+
+      <div class="section__cta reveal">
+        <a href="https://www.google.com/search?q=Dr.+Leandro+Vladimir+Cardiologista+Salvador+avalia%C3%A7%C3%B5es" class="btn btn--primary btn--large" target="_blank" rel="noopener">
+          Ver avaliações no Google
+        </a>
       </div>
     </div>
   </section>
+
 
   <!-- ============ HOSPITAIS ============ -->
   <section class="section" id="hospitais">
@@ -788,7 +907,7 @@
         </div>
 
         <div class="contact__photo reveal" data-delay="200">
-          <img src="/images/final.jpg" alt="Dr. Leandro Vladimir em seu consultório em Salvador" width="600" height="900" loading="lazy" />
+          <img src="/images/final.jpg" data-fallbacks="/images/final.JPG,/images/final.jpeg,/images/final.JPEG,/images/Final.JPG,/images/Final.jpg" alt="Dr. Leandro Vladimir em seu consultório em Salvador" width="600" height="900" loading="lazy" />
         </div>
       </div>
 
@@ -844,5 +963,73 @@
   </a>
 
   <script src="script.js" defer></script>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+      const dotsWrap = document.querySelector('.testimonial-dots');
+      const prev = document.querySelector('.testimonial-arrow--prev');
+      const next = document.querySelector('.testimonial-arrow--next');
+
+      if (!slides.length || !dotsWrap || !prev || !next) return;
+
+      let current = 0;
+      let timer;
+
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'testimonial-dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', 'Ver depoimento ' + (index + 1));
+        dot.addEventListener('click', () => show(index, true));
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsWrap.querySelectorAll('.testimonial-dot'));
+
+      function show(index, userAction) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+
+        current = (index + slides.length) % slides.length;
+
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+
+        if (userAction) restart();
+      }
+
+      function nextSlide() { show(current + 1, false); }
+      function prevSlide() { show(current - 1, true); }
+
+      function restart() {
+        clearInterval(timer);
+        timer = setInterval(nextSlide, 5500);
+      }
+
+      prev.addEventListener('click', prevSlide);
+      next.addEventListener('click', () => show(current + 1, true));
+
+      show(0, false);
+      restart();
+    })();
+  </script>
+
+
+  <script>
+    (function () {
+      document.querySelectorAll('img[data-fallbacks]').forEach(function (img) {
+        const fallbacks = img.getAttribute('data-fallbacks').split(',').map(s => s.trim()).filter(Boolean);
+        let index = 0;
+
+        img.addEventListener('error', function () {
+          if (index < fallbacks.length) {
+            img.src = fallbacks[index++];
+          }
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>
