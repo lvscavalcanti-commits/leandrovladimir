@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://leandrovladimir.com.br/" />
   <meta property="og:title" content="Dr. Leandro Vladimir | Cardiologista Intervencionista em Salvador" />
   <meta property="og:description" content="Especialista em procedimentos cardíacos minimamente invasivos. Atendimento personalizado com tecnologia de ponta em Salvador, BA. CRM/BA 30.838." />
-  <meta property="og:image" content="https://leandrovladimir.com.br/images/Consulta.jpg" />
+  <meta property="og:image" content="https://leandrovladimir.com.br/images/consulta.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1800" />
   <meta property="og:locale" content="pt_BR" />
@@ -32,11 +32,11 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dr. Leandro Vladimir | Cardiologista Intervencionista em Salvador" />
   <meta name="twitter:description" content="Cardiologista intervencionista em Salvador, BA. Especialista em cateterismo, angioplastia e TAVI." />
-  <meta name="twitter:image" content="https://leandrovladimir.com.br/images/Consulta.jpg" />
+  <meta name="twitter:image" content="https://leandrovladimir.com.br/images/consulta.jpg" />
 
   <!-- ========== FAVICON ========== -->
-  <link rel="icon" type="image/jpeg" href="/images/Consulta.jpg" />
-  <link rel="apple-touch-icon" href="/images/Consulta.jpg" />
+  <link rel="icon" type="image/png" href="/images/consulta.jpg" />
+  <link rel="apple-touch-icon" href="/images/consulta.jpg" />
 
   <!-- ========== FONTS ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -83,7 +83,7 @@
         "alternateName": "Dr. Leandro Vladimir Cavalcanti",
         "description": "Cardiologista intervencionista em Salvador, Bahia. Especialista em cateterismo cardíaco, angioplastia coronária, TAVI, valvuloplastia e procedimentos cardiovasculares minimamente invasivos.",
         "url": "https://leandrovladimir.com.br/",
-        "image": "https://leandrovladimir.com.br/images/Consulta.jpg",
+        "image": "https://leandrovladimir.com.br/images/consulta.jpg",
         "telephone": "+55-71-99995-3504",
         "medicalSpecialty": ["Cardiology", "InterventionalCardiology"],
         "identifier": [
@@ -122,7 +122,7 @@
         "@type": ["MedicalBusiness", "LocalBusiness"],
         "@id": "https://leandrovladimir.com.br/#business",
         "name": "Dr. Leandro Vladimir — Cardiologia Intervencionista",
-        "image": "https://leandrovladimir.com.br/images/Consulta.jpg",
+        "image": "https://leandrovladimir.com.br/images/consulta.jpg",
         "url": "https://leandrovladimir.com.br/",
         "telephone": "+55-71-99995-3504",
         "priceRange": "$$$",
@@ -161,30 +161,89 @@
       justify-content: center;
       line-height: 1.05;
       text-decoration: none;
-      min-width: 230px;
+      min-width: 250px;
+      padding: 6px 0;
     }
     .brand__name {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 700;
-      font-size: 1.55rem;
+      font-size: 1.62rem;
       color: #0B1B2E;
       letter-spacing: -0.02em;
       white-space: nowrap;
     }
     .brand__sub {
-      margin-top: 4px;
+      margin-top: 5px;
       font-family: 'Manrope', Arial, sans-serif;
       font-weight: 700;
       font-size: 0.72rem;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: #C59B55;
       white-space: nowrap;
     }
+    .scroll-hint {
+      text-align: center;
+      color: #8a94a6;
+      font-weight: 600;
+      margin: -10px 0 22px;
+      font-size: 0.95rem;
+    }
+    .hospitals--scroll {
+      display: flex !important;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 8px 4px 24px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .hospitals--scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .hospitals--scroll::-webkit-scrollbar-track {
+      background: rgba(11, 27, 46, 0.08);
+      border-radius: 999px;
+    }
+    .hospitals--scroll::-webkit-scrollbar-thumb {
+      background: rgba(197, 155, 85, 0.65);
+      border-radius: 999px;
+    }
+    .hospitals--scroll .hospital {
+      min-width: 360px;
+      max-width: 360px;
+      scroll-snap-align: start;
+    }
     @media (max-width: 768px) {
       .header__brand--text { min-width: auto; }
       .brand__name { font-size: 1.25rem; }
-      .brand__sub { font-size: 0.58rem; letter-spacing: 0.11em; }
+      .brand__sub { font-size: 0.58rem; letter-spacing: 0.12em; }
+      .hospitals--scroll .hospital { min-width: 82vw; max-width: 82vw; }
+    }
+  </style>
+
+
+  <style>
+    .hero__pulse,
+    .section__bg-pulse {
+      display: none !important;
+    }
+
+    .hero__bg {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(197, 155, 85, 0.18), transparent 28%),
+        radial-gradient(circle at 18% 82%, rgba(29, 78, 137, 0.18), transparent 30%),
+        linear-gradient(135deg, rgba(11, 27, 46, 0.06), rgba(255, 255, 255, 0.02));
+    }
+
+    .section--dark::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 80% 15%, rgba(197, 155, 85, 0.14), transparent 26%),
+        radial-gradient(circle at 15% 90%, rgba(48, 94, 150, 0.18), transparent 30%);
+      opacity: 0.9;
     }
   </style>
 
@@ -199,7 +258,7 @@
     <div class="container header__inner">
       <a href="#hero" class="header__brand header__brand--text" aria-label="Dr. Leandro Vladimir — Início">
         <span class="brand__name">Dr. Leandro Vladimir</span>
-        <span class="brand__sub">Cardiologista Intervencionista</span>
+        <span class="brand__sub">Cardiologia Intervencionista</span>
       </a>
       <nav class="header__nav" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
@@ -207,6 +266,7 @@
         <a href="#procedimentos">Procedimentos</a>
         <a href="#conteudo">Saúde Cardíaca</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#hospitais">Hospitais</a>
         <a href="#contato">Contato</a>
       </nav>
       <a href="https://wa.me/5571999953504?text=Ol%C3%A1%2C%20Dr.%20Leandro.%20Gostaria%20de%20agendar%20uma%20consulta." class="btn btn--primary header__cta" data-track="header_cta_whatsapp" target="_blank" rel="noopener">
@@ -272,7 +332,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 12h.01M9 15h.01M15 9h.01M15 12h.01M15 15h.01"/></svg>
             </span>
             <div>
-              <strong>7 Hospitais de Referência</strong>
+              <strong>6 Hospitais de Referência</strong>
               <small>Salvador e região</small>
             </div>
           </li>
@@ -280,16 +340,13 @@
       </div>
       <div class="hero__visual reveal" data-delay="200">
         <div class="hero__photo">
-          <img src="/images/Consulta.jpg" alt="Dr. Leandro Vladimir, cardiologista intervencionista em Salvador" width="600" height="900" loading="eager" fetchpriority="high" />
+          <img src="/images/consulta.jpg" alt="Dr. Leandro Vladimir, cardiologista intervencionista em Salvador" width="600" height="900" loading="eager" fetchpriority="high" />
         </div>
         <div class="hero__badge">
           <span>Salvador</span>
           <strong>Bahia</strong>
         </div>
       </div>
-    </div>
-    <div class="hero__pulse" aria-hidden="true">
-      <svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 L200,40 L240,40 L260,15 L290,65 L320,5 L350,75 L380,40 L600,40 L640,40 L660,15 L690,65 L720,5 L750,75 L780,40 L1200,40" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
     </div>
   </section>
 
@@ -302,7 +359,7 @@
       </div>
       <div class="about__grid">
         <div class="about__photo reveal">
-          <img src="/images/Sobre.JPG" alt="Dr. Leandro Vladimir em atendimento no consultório em Salvador" width="600" height="900" loading="lazy" />
+          <img src="/images/sobre.jpg" alt="Dr. Leandro Vladimir em atendimento no consultório em Salvador" width="600" height="900" loading="lazy" />
           <div class="about__quote">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
             <p>Formação de excelência<br/><small>Residência em Cardiologia e Hemodinâmica nos melhores centros do Brasil</small></p>
@@ -410,9 +467,6 @@
 
   <!-- ============ PROCEDIMENTOS ============ -->
   <section class="section section--dark" id="procedimentos">
-    <div class="section__bg-pulse" aria-hidden="true">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0,100 L300,100 L340,100 L360,40 L390,160 L420,20 L450,180 L480,100 L800,100 L840,100 L860,40 L890,160 L920,20 L950,180 L980,100 L1200,100" fill="none" stroke="currentColor" stroke-width="1"/></svg>
-    </div>
     <div class="container">
       <div class="section__head section__head--center reveal">
         <span class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> Especialidades</span>
@@ -640,29 +694,54 @@
   <section class="section" id="hospitais">
     <div class="container">
       <div class="section__head section__head--center reveal">
-        <span class="eyebrow"><span class="eyebrow__line"></span> Onde Atendo</span>
+        <span class="eyebrow"><span class="eyebrow__line"></span> Onde Realizo Procedimentos</span>
         <h2 class="section__title">Hospitais de <em>Referência</em></h2>
-        <p class="section__lede">Atendimento em hospitais reconhecidos pela excelência em cardiologia e infraestrutura de ponta em Salvador e região.</p>
+        <p class="section__lede">Atuação em centros hospitalares de Salvador com estrutura para cardiologia intervencionista, hemodinâmica e cuidado cardiovascular de alta complexidade.</p>
       </div>
 
-      <div class="hospitals">
+      <p class="scroll-hint">Arraste para o lado para ver todos os hospitais →</p>
+
+      <div class="hospitals hospitals--scroll" aria-label="Hospitais onde realizo procedimentos">
+        <article class="hospital reveal">
+          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <h3>Hospital Santa Izabel</h3>
+          <p>Referência tradicional em cardiologia e hemodinâmica em Salvador.</p>
+          <span class="hospital__loc">Nazaré, Salvador-BA</span>
+        </article>
+
+        <article class="hospital reveal">
+          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <h3>Hospital Português</h3>
+          <p>Estrutura hospitalar completa para procedimentos cardiovasculares.</p>
+          <span class="hospital__loc">Graça, Salvador-BA</span>
+        </article>
+
+        <article class="hospital reveal">
+          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <h3>Hospital da Bahia</h3>
+          <p>Hospital com suporte multidisciplinar para pacientes cardiológicos.</p>
+          <span class="hospital__loc">Salvador-BA</span>
+        </article>
+
+        <article class="hospital reveal">
+          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <h3>Hospital Mater Dei</h3>
+          <p>Infraestrutura moderna para atendimento e procedimentos de alta complexidade.</p>
+          <span class="hospital__loc">Salvador-BA</span>
+        </article>
+
         <article class="hospital reveal">
           <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
           <h3>Hospital Aliança Star</h3>
-          <p>Hospital de alto padrão com centro de hemodinâmica moderno e equipe multidisciplinar completa para procedimentos cardiovasculares.</p>
+          <p>Hospital de alto padrão com suporte tecnológico e equipe multidisciplinar.</p>
           <span class="hospital__loc">Av. Juracy Magalhães Jr., Salvador-BA</span>
         </article>
-        <article class="hospital reveal" data-delay="100">
+
+        <article class="hospital reveal">
           <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
-          <h3>Hospital Cardio Pulmonar</h3>
-          <p>Centro de excelência em procedimentos cardiovasculares, com tecnologia avançada e infraestrutura moderna dedicada à cardiologia.</p>
+          <h3>Hospital Cardiopulmonar</h3>
+          <p>Referência em cardiologia, com estrutura dedicada ao cuidado cardiovascular.</p>
           <span class="hospital__loc">Av. Anita Garibaldi, Salvador-BA</span>
-        </article>
-        <article class="hospital reveal" data-delay="200">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
-          <h3>Hospital Santa Izabel</h3>
-          <p>Referência em cardiologia na Bahia, com centro de hemodinâmica de última geração e tradição centenária no cuidado ao paciente.</p>
-          <span class="hospital__loc">Nazaré, Salvador-BA</span>
         </article>
       </div>
     </div>
@@ -709,7 +788,7 @@
         </div>
 
         <div class="contact__photo reveal" data-delay="200">
-          <img src="/images/Final.JPG" alt="Dr. Leandro Vladimir em seu consultório em Salvador" width="600" height="900" loading="lazy" />
+          <img src="/images/final.jpg" alt="Dr. Leandro Vladimir em seu consultório em Salvador" width="600" height="900" loading="lazy" />
         </div>
       </div>
 
@@ -735,7 +814,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/Consulta.jpg" alt="Logo Dr. Leandro Vladimir" width="180" height="106" />
+          <img src="/images/consulta.jpg" alt="Logo Dr. Leandro Vladimir" width="180" height="106" />
           <p class="footer__crm">CRM/BA 30.838 · RQE 22.168 · RQE 24.953</p>
         </div>
         <nav class="footer__nav" aria-label="Navegação do rodapé">
