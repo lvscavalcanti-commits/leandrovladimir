@@ -19,4 +19,9 @@
       <image:title>Consultório do Dr. Leandro Vladimir em Salvador</image:title>
     </image:image>
   </url>
+        <url>
+    <loc>https://leandrovladimir.com.br/cateterismo-risco-de-morte/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
