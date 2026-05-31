@@ -43,8 +43,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:image" content="https://leandrovladimir.com.br/images/consulta.jpg" />
 
   <!-- ========== FAVICON ========== -->
-  <link rel="icon" type="image/png" href="/images/consulta.jpg" />
-  <link rel="apple-touch-icon" href="/images/consulta.jpg" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/favicon.png" />
 
   <!-- ========== FONTES ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -137,229 +137,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   </script>
 
-  <style>
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-    .proc__link {
-      display: inline-block;
-      margin-top: 14px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: #C59B55;
-      text-decoration: none;
-      transition: color 0.2s, transform 0.2s;
-    }
-    .proc__link:hover {
-      color: #DDB18A;
-      transform: translateX(3px);
-    }
-    .header__brand--text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 1.05;
-      text-decoration: none;
-      min-width: 250px;
-      padding: 6px 0;
-    }
-    .brand__name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.62rem;
-      color: #0B1B2E;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-    .brand__sub {
-      margin-top: 5px;
-      font-family: 'Manrope', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #C59B55;
-      white-space: nowrap;
-    }
-    .scroll-hint {
-      text-align: center;
-      color: #8a94a6;
-      font-weight: 600;
-      margin: -10px 0 22px;
-      font-size: 0.95rem;
-    }
-    .hospitals--scroll {
-      display: flex !important;
-      gap: 24px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding: 8px 4px 24px;
-      -webkit-overflow-scrolling: touch;
-    }
-    .hospitals--scroll::-webkit-scrollbar {
-      height: 8px;
-    }
-    .hospitals--scroll::-webkit-scrollbar-track {
-      background: rgba(11, 27, 46, 0.08);
-      border-radius: 999px;
-    }
-    .hospitals--scroll::-webkit-scrollbar-thumb {
-      background: rgba(197, 155, 85, 0.65);
-      border-radius: 999px;
-    }
-    .hospitals--scroll .hospital {
-      min-width: 360px;
-      max-width: 360px;
-      scroll-snap-align: start;
-    }
-    @media (max-width: 768px) {
-      .header__brand--text { min-width: auto; }
-      .brand__name { font-size: 1.25rem; }
-      .brand__sub { font-size: 0.58rem; letter-spacing: 0.12em; }
-      .hospitals--scroll .hospital { min-width: 82vw; max-width: 82vw; }
-    }
-  </style>
 
-
-  <style>
-    .hero__pulse,
-    .section__bg-pulse {
-      display: none !important;
-    }
-
-    .hero__bg {
-      background:
-        radial-gradient(circle at 78% 18%, rgba(197, 155, 85, 0.18), transparent 28%),
-        radial-gradient(circle at 18% 82%, rgba(29, 78, 137, 0.18), transparent 30%),
-        linear-gradient(135deg, rgba(11, 27, 46, 0.06), rgba(255, 255, 255, 0.02));
-    }
-
-    .section--dark::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 80% 15%, rgba(197, 155, 85, 0.14), transparent 26%),
-        radial-gradient(circle at 15% 90%, rgba(48, 94, 150, 0.18), transparent 30%);
-      opacity: 0.9;
-    }
-  </style>
-
-
-  <style>
-    .testimonial-carousel {
-      position: relative;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 56px 44px;
-    }
-
-    .testimonial-track {
-      position: relative;
-      min-height: 320px;
-    }
-
-    .testimonial-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transform: translateY(18px) scale(0.98);
-      pointer-events: none;
-      transition: opacity .45s ease, transform .45s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .testimonial-slide.is-active {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      pointer-events: auto;
-    }
-
-    .testimonial-arrow {
-      position: absolute;
-      top: 42%;
-      transform: translateY(-50%);
-      z-index: 2;
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      border: 1px solid rgba(11, 27, 46, 0.14);
-      background: #fff;
-      color: #0B1B2E;
-      font-size: 32px;
-      line-height: 1;
-      cursor: pointer;
-      box-shadow: 0 14px 32px rgba(11, 27, 46, 0.12);
-      transition: .2s ease;
-    }
-
-    .testimonial-arrow:hover {
-      transform: translateY(-50%) scale(1.05);
-      color: #C59B55;
-    }
-
-    .testimonial-arrow--prev { left: 0; }
-    .testimonial-arrow--next { right: 0; }
-
-    .testimonial-dots {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .testimonial-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      border: 0;
-      background: rgba(11, 27, 46, 0.22);
-      cursor: pointer;
-      transition: .2s ease;
-    }
-
-    .testimonial-dot.is-active {
-      width: 28px;
-      background: #C59B55;
-    }
-
-    @media (max-width: 768px) {
-      .testimonial-carousel {
-        padding: 0 0 44px;
-      }
-
-      .testimonial-track {
-        min-height: 430px;
-      }
-
-      .testimonial-arrow {
-        top: auto;
-        bottom: -4px;
-        width: 38px;
-        height: 38px;
-        font-size: 28px;
-      }
-
-      .testimonial-arrow--prev { left: 18px; }
-      .testimonial-arrow--next { right: 18px; }
-    }
-  </style>
 
 </head>
 
@@ -374,9 +152,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ============ HEADER / NAV ============ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#hero" class="header__brand header__brand--text" aria-label="Dr. Leandro Vladimir — Início">
-        <span class="brand__name">Dr. Leandro Vladimir</span>
-        <span class="brand__sub">Cardiologia Intervencionista</span>
+      <a href="#hero" class="header__brand" aria-label="Dr. Leandro Vladimir — Início">
+        <img src="/images/logo-header.png" alt="Logo Dr. Leandro Vladimir" class="header__logo" width="240" height="98" />
       </a>
       <nav class="header__nav" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
@@ -707,11 +484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div>
 
-<style>
-  @media (max-width: 768px) {
-    .articles { grid-template-columns: 1fr !important; }
-  }
-</style>
+
 
   <!-- ============ FAQ ============ -->
   <section class="section" id="faq">
@@ -861,42 +634,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="hospitals hospitals--scroll" aria-label="Hospitais onde realizo procedimentos">
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-santaizabel.jpg" alt="Logo Hospital Santa Izabel" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital Santa Izabel</h3>
           <p>Referência tradicional em cardiologia e hemodinâmica em Salvador.</p>
           <span class="hospital__loc">Nazaré, Salvador-BA</span>
         </article>
 
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-portugues.webp" alt="Logo Hospital Português" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital Português</h3>
           <p>Estrutura hospitalar completa para procedimentos cardiovasculares.</p>
           <span class="hospital__loc">Graça, Salvador-BA</span>
         </article>
 
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-bahia.png" alt="Logo Hospital da Bahia" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital da Bahia</h3>
           <p>Hospital com suporte multidisciplinar para pacientes cardiológicos.</p>
           <span class="hospital__loc">Salvador-BA</span>
         </article>
 
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-materdei.webp" alt="Logo Hospital Mater Dei" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital Mater Dei</h3>
           <p>Infraestrutura moderna para atendimento e procedimentos de alta complexidade.</p>
           <span class="hospital__loc">Salvador-BA</span>
         </article>
 
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-aliancastar.jpg" alt="Logo Hospital Aliança Star" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital Aliança Star</h3>
           <p>Hospital de alto padrão com suporte tecnológico e equipe multidisciplinar.</p>
           <span class="hospital__loc">Av. Juracy Magalhães Jr., Salvador-BA</span>
         </article>
 
         <article class="hospital reveal">
-          <div class="hospital__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M10 9h4M10 12h4M10 15h4"/></svg></div>
+          <div class="hospital__logo-container">
+            <img src="/images/hosp-cardiopulmonar.png" alt="Logo Hospital Cardiopulmonar" class="hospital__logo" loading="lazy" />
+          </div>
           <h3>Hospital Cardiopulmonar</h3>
           <p>Referência em cardiologia, com estrutura dedicada ao cuidado cardiovascular.</p>
           <span class="hospital__loc">Av. Anita Garibaldi, Salvador-BA</span>
@@ -972,7 +757,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/consulta.jpg" alt="Logo Dr. Leandro Vladimir" width="180" height="106" />
+          <img src="/images/logo-footer.png" alt="Logo Dr. Leandro Vladimir" width="240" height="98" />
           <p class="footer__crm">CRM/BA 30.838 · RQE 22.168 · RQE 24.953</p>
         </div>
         <nav class="footer__nav" aria-label="Navegação do rodapé">

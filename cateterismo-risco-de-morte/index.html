@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="Risco real de morte no cateterismo cardíaco explicado por cardiologista intervencionista em Salvador." />
   <meta name="twitter:image" content="https://leandrovladimir.com.br/images/consulta.jpg" />
 
-  <link rel="icon" type="image/png" href="/images/consulta.jpg" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,262 +59,7 @@
   }
   </script>
 
-  <style>
-    .header__brand--text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 1.05;
-      text-decoration: none;
-      min-width: 250px;
-      padding: 6px 0;
-    }
-    .brand__name {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.62rem;
-      color: #0B1B2E;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-    .brand__sub {
-      margin-top: 5px;
-      font-family: 'Manrope', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #C59B55;
-      white-space: nowrap;
-    }
-    @media (max-width: 768px) {
-      .header__brand--text { min-width: auto; }
-      .brand__name { font-size: 1.25rem; }
-      .brand__sub { font-size: 0.58rem; letter-spacing: 0.12em; }
-    }
 
-    /* Page-specific overrides */
-    .page-hero {
-      padding: 80px 0 60px;
-      background: #0B1B2E;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(197,155,85,0.15), transparent 40%),
-        radial-gradient(circle at 15% 80%, rgba(29,78,137,0.15), transparent 35%);
-      pointer-events: none;
-    }
-    .page-hero .container { position: relative; }
-
-    .page-hero__eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .page-hero__eyebrow .eyebrow__line {
-      display: inline-block;
-      width: 32px;
-      height: 1px;
-      background: #C59B55;
-    }
-    .page-hero__eyebrow span {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #C59B55;
-    }
-
-    .page-hero__title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 700;
-      color: #F5F0E8;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      max-width: 800px;
-    }
-    .page-hero__title em {
-      font-style: italic;
-      color: #C59B55;
-    }
-
-    .page-hero__lede {
-      font-family: 'Manrope', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: rgba(245,240,232,0.75);
-      max-width: 600px;
-      margin-bottom: 12px;
-      line-height: 1.7;
-    }
-
-    .page-hero__crm {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: #C59B55;
-      letter-spacing: 0.06em;
-    }
-
-    /* Stats strip */
-    .stats-strip {
-      background: #F5F0E8;
-      border-bottom: 1px solid rgba(11,27,46,0.08);
-      padding: 40px 0;
-    }
-    .stats-strip__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-    .stats-strip__item {
-      text-align: center;
-      padding: 20px 24px;
-      border-right: 1px solid rgba(11,27,46,0.1);
-    }
-    .stats-strip__item:last-child { border-right: none; }
-    .stats-strip__number {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #0B1B2E;
-      display: block;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .stats-strip__label {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: #5a6a7a;
-      line-height: 1.4;
-    }
-    @media (max-width: 600px) {
-      .stats-strip__grid { grid-template-columns: 1fr; }
-      .stats-strip__item { border-right: none; border-bottom: 1px solid rgba(11,27,46,0.1); }
-      .stats-strip__item:last-child { border-bottom: none; }
-    }
-
-    /* Risk items */
-    .risk-list {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .risk-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 18px;
-      background: #fff;
-      border: 1px solid rgba(11,27,46,0.08);
-      border-radius: 10px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.93rem;
-      color: #3a4a5a;
-      line-height: 1.5;
-    }
-    .risk-list li::before {
-      content: "";
-      display: block;
-      width: 7px;
-      height: 7px;
-      min-width: 7px;
-      border-radius: 50%;
-      background: #C59B55;
-      margin-top: 6px;
-    }
-    .risk-list li strong { color: #0B1B2E; }
-
-    /* Dark risk list */
-    .section--dark .risk-list li {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.08);
-      color: rgba(245,240,232,0.75);
-    }
-    .section--dark .risk-list li strong { color: #F5F0E8; }
-
-    /* Alert box */
-    .alert-box {
-      background: rgba(197,155,85,0.08);
-      border-left: 3px solid #C59B55;
-      border-radius: 0 10px 10px 0;
-      padding: 16px 20px;
-      margin: 24px 0;
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.93rem;
-      color: #3a4a5a;
-      line-height: 1.6;
-    }
-    .alert-box strong { color: #0B1B2E; }
-    .section--dark .alert-box {
-      background: rgba(197,155,85,0.1);
-      color: rgba(245,240,232,0.8);
-    }
-    .section--dark .alert-box strong { color: #F5F0E8; }
-
-    /* Number list */
-    .num-list {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0;
-      counter-reset: q;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .num-list li {
-      counter-increment: q;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.93rem;
-      color: #3a4a5a;
-      line-height: 1.5;
-    }
-    .num-list li::before {
-      content: counter(q);
-      min-width: 28px;
-      height: 28px;
-      background: #0B1B2E;
-      color: #C59B55;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      font-family: 'Manrope', sans-serif;
-      flex-shrink: 0;
-    }
-
-    /* Breadcrumb */
-    .breadcrumb {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.8rem;
-      color: rgba(245,240,232,0.5);
-      margin-bottom: 28px;
-    }
-    .breadcrumb a {
-      color: rgba(245,240,232,0.5);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .breadcrumb a:hover { color: #C59B55; }
-    .breadcrumb span { margin: 0 8px; }
-  </style>
 </head>
 
 <body>
@@ -323,9 +68,8 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="https://leandrovladimir.com.br" class="header__brand header__brand--text" aria-label="Dr. Leandro Vladimir — Início">
-        <span class="brand__name">Dr. Leandro Vladimir</span>
-        <span class="brand__sub">Cardiologia Intervencionista</span>
+      <a href="https://leandrovladimir.com.br" class="header__brand" aria-label="Dr. Leandro Vladimir — Início">
+        <img src="/images/logo-header.png" alt="Logo Dr. Leandro Vladimir" class="header__logo" width="240" height="98" />
       </a>
       <nav class="header__nav" aria-label="Navegação principal">
         <a href="https://leandrovladimir.com.br/#sobre">Sobre</a>
@@ -607,7 +351,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/consulta.jpg" alt="Logo Dr. Leandro Vladimir" width="180" height="106" />
+          <img src="/images/logo-footer.png" alt="Logo Dr. Leandro Vladimir" width="240" height="98" />
           <p class="footer__crm">CRM/BA 30.838 · RQE 22.168 · RQE 24.953</p>
         </div>
         <nav class="footer__nav" aria-label="Navegação do rodapé">
