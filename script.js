@@ -73,10 +73,17 @@
 
   // ===== Analytics: track WhatsApp / CTA clicks =====
   // Works with Google Tag Manager (dataLayer) and Google Analytics 4 (gtag)
-  document.querySelectorAll('[data-track]').forEach((el) => {
+  // Tracks any element with [data-track] AND any WhatsApp link (wa.me / api.whatsapp.com),
+  // so clicks are measured on every page even without an explicit data-track attribute.
+  const trackedEls = new Set();
+  document
+    .querySelectorAll('[data-track], a[href*="wa.me"], a[href*="api.whatsapp.com"]')
+    .forEach((el) => trackedEls.add(el));
+  trackedEls.forEach((el) => {
     el.addEventListener('click', () => {
-      const event = el.getAttribute('data-track');
       const url = el.getAttribute('href') || '';
+      const isWhatsApp = /wa\.me|api\.whatsapp\.com/.test(url);
+      const event = el.getAttribute('data-track') || (isWhatsApp ? 'whatsapp_click' : 'cta_click');
       const payload = {
         event: 'cta_click',
         cta_id: event,
