@@ -45,19 +45,45 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "name": "Cateterismo Pode Matar? Risco de Morte no Cateterismo Cardíaco",
-    "description": "Explicação detalhada sobre o risco real de morte e complicações no cateterismo cardíaco, por Dr. Leandro Vladimir, cardiologista intervencionista em Salvador.",
-    "url": "https://leandrovladimir.com.br/cateterismo-risco-de-morte/",
-    "author": {
-      "@type": "Physician",
-      "name": "Dr. Leandro Vladimir",
-      "identifier": "CRM/BA 30.838"
-    },
-    "about": {
-      "@type": "MedicalProcedure",
-      "name": "Cateterismo Cardíaco"
-    }
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "Cateterismo Pode Matar? Risco de Morte no Cateterismo Cardíaco",
+        "description": "Explicação detalhada sobre o risco real de morte e complicações no cateterismo cardíaco, por Dr. Leandro Vladimir, cardiologista intervencionista em Salvador.",
+        "url": "https://leandrovladimir.com.br/cateterismo-risco-de-morte/",
+        "inLanguage": "pt-BR",
+        "author": {
+          "@type": "Physician",
+          "name": "Dr. Leandro Vladimir",
+          "identifier": "CRM/BA 30.838",
+          "url": "https://leandrovladimir.com.br/"
+        },
+        "about": {
+          "@type": "MedicalProcedure",
+          "name": "Cateterismo Cardíaco",
+          "procedureType": "https://schema.org/DiagnosticProcedure",
+          "bodyLocation": "Artérias coronárias"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://leandrovladimir.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Saúde Cardíaca", "item": "https://leandrovladimir.com.br/#conteudo" },
+          { "@type": "ListItem", "position": 3, "name": "Cateterismo e risco de morte", "item": "https://leandrovladimir.com.br/cateterismo-risco-de-morte/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Cateterismo de emergência é mais arriscado que o eletivo?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O cateterismo realizado durante um infarto agudo (emergência) tem risco maior do que o procedimento eletivo programado, porque o próprio infarto já compromete a estabilidade do paciente. Ainda assim, o benefício de abrir a artéria rapidamente supera amplamente o risco do procedimento nesses casos." } },
+          { "@type": "Question", "name": "O cateterismo dói?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O procedimento é realizado sob sedação leve e anestesia local no local da punção, geralmente no punho. A maioria dos pacientes relata apenas uma sensação leve de pressão, sem dor significativa durante o exame." } },
+          { "@type": "Question", "name": "Preciso ficar internado após o cateterismo?", "acceptedAnswer": { "@type": "Answer", "text": "No cateterismo diagnóstico eletivo pela via radial, a maioria dos pacientes recebe alta no mesmo dia, após algumas horas de observação. Quando é realizada angioplastia com stent na mesma sessão, a internação costuma ser de 24 a 48 horas." } },
+          { "@type": "Question", "name": "Quem tem problema renal pode fazer cateterismo?", "acceptedAnswer": { "@type": "Answer", "text": "Pode, com cuidados especiais. O contraste utilizado pode afetar a função renal, por isso pacientes com insuficiência renal prévia precisam de hidratação adequada antes e depois do exame, e o volume de contraste é minimizado. Em casos selecionados, existem técnicas que permitem realizar o cateterismo com quantidade mínima de contraste." } },
+          { "@type": "Question", "name": "Existe alternativa ao cateterismo para avaliar as artérias coronárias?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A angiotomografia coronária (angioTC) é um exame não invasivo que pode avaliar as coronárias em determinados contextos clínicos, mas tem limitações, especialmente em pacientes com calcificação coronariana importante ou frequência cardíaca elevada. O cateterismo permanece o padrão-ouro para diagnóstico e é o único que permite tratamento imediato se uma obstrução for encontrada." } }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -320,8 +346,8 @@
               </div>
               <div>
                 <small>Consultório</small>
-                <strong>Centro Médico Empresarial Vitraux</strong>
-                <span>Av. Anita Garibaldi, 43 — Sala 503<br/>Federação, Salvador-BA</span>
+                <strong>Centro Médico Mater Dei</strong>
+                <span>R. Dr. Rômulo Serrano, 224 — 10º andar<br/>Rio Vermelho, Salvador-BA</span>
               </div>
             </div>
             <div class="contact__item">
@@ -367,7 +393,7 @@
         <div class="footer__contact">
           <h4>Contato</h4>
           <a href="https://wa.me/5571999953504" target="_blank" rel="noopener">WhatsApp (71) 99995-3504</a>
-          <p>Centro Médico Empresarial Vitraux<br/>Av. Anita Garibaldi, 43 — Sala 503<br/>Federação, Salvador-BA</p>
+          <p>Centro Médico Mater Dei<br/>R. Dr. Rômulo Serrano, 224 — 10º andar<br/>Rio Vermelho, Salvador-BA</p>
         </div>
       </div>
       <div class="footer__bottom">
